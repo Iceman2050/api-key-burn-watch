@@ -9,4 +9,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pytest
-      - run: pytest -v
+      # python -m ensures the repo root is on sys.path so the CLI module imports
+      - run: python -m pytest -v
